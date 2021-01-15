@@ -74,6 +74,7 @@ footer {
 }
 
 .content div {
+    height:100px;
     width: 200px;
 }
 .content div p {
@@ -81,4 +82,8 @@ footer {
 }
 .content .bottom {
     margin-top: 30px;
+}
+
+.content img {
+    width:200px;
 }
