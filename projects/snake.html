@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-title" content="Snace">
+        <meta name="application-name" content="Snace">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <style>
+            body {background-color: red;}
+            h1   {color: blue;}
+            p    {color: blue;}
+            .center{
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
+    <body>
+        <p id = 'window size'></p>
+        <div class='center'>
+            <canvas id = 'board' width = '200' height = '200' style = 'border:10px solid #578a34'></canvas>
+        </div>
+        <div class='center'>
+            <canvas id = 'game' width = '200' height = '200' style = 'border:10px solid #578a34'></canvas>
+        </div>
+        <script>
+            var color = [Math.floor(Math.random()*256), Math.floor(Math.random()*256), Math.floor(Math.random()*256)];
+            var up = [true, true, true];
+            function changeColor(){
+                document.body.style.backgroundColor = 'rgb(' + color.join(',') + ')';
+                for(let i = 0; i < 3; i++){
+                    if(up[i]){
+                        if(color[i] < 255){
+                            color[i]++;
+                        } else{
+                            color[i]--;
+                            up[i] = false;
+                        }
+                    } else{
+                        if(color[i] > -1){
+                            color[i]--;
+                        } else {
+                            color[i]++;
+                            up[i] = true;
+                        }
+                    }
+                }
+            }
+            var start;
+            function startFunction(){
+                start = setInterval(changeColor, 5);
+            }
+            startFunction();
+        </script>
+        <script src='snake.js'></script>
+    </body>
+</html>
