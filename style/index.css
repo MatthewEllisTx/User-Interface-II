@@ -5,7 +5,7 @@
 	padding: 0;	
 	border: 0;	
 	font-size: 100%;	
-	font: inherit;	
+	font: inherit;
 	vertical-align: baseline;	
 }	
 
@@ -15,7 +15,7 @@ html,body {
 
 body {
     /* border: 100px solid black; */
-    background: url(D:/Lambda/unit1/day4/User-Interface-II/assets/the-illusionist.png);
+    background: url(D:/Lambda/unit1/week1/day4/User-Interface-II/assets/the-illusionist.png);
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -81,4 +81,40 @@ footer {
 }
 .content .bottom {
     margin-top: 30px;
+}
+
+@media (max-width: 800px){
+    header {
+        min-width: 300px;
+    }
+    .content {
+        flex-direction: column;
+        min-width: 300px;
+        margin-top: 50px;
+    }
+    .content div {
+        padding: 5%;
+    }
+    .content div img {
+        padding-bottom: 4%;
+        border-bottom: 1px dashed black;
+    }
+    footer {
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 500px){
+    header { 
+        min-width: 220px;
+        width: 220px;
+    }
+    .content {
+        min-width: 220px;
+        width: 220px;
+    }
+    footer {
+        min-width: 220px;
+        width: 220px;
+    }
 }
