@@ -75,12 +75,21 @@ footer {
 
 .content div {
     width: 200px;
+    height: 726px;
+}
+.content div img {
+    width: 200px;
 }
 .content div p {
     text-align: center;
 }
 .content .bottom {
     margin-top: 30px;
+}
+
+#column1 a {
+    display: block;
+    margin-bottom: 109px;
 }
 
 @media (max-width: 800px){
